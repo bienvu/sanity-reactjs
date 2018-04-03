@@ -1,0 +1,44 @@
+.article-title {
+  padding: rem(43px 0 85px);
+
+  &__datetime {
+    font-size: 125%;
+    line-height: 1.4;
+    margin-bottom: rem(10px);
+
+    @include susy-media(mobileLandscape) {
+      font-size: 150%;
+    }
+  }
+
+  &__author {
+    margin-top: rem(30px);
+
+    @include susy-media(mobileLandscape) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
+    }
+  }
+
+  &__picture {
+    display: none;
+    height: rem(40px);
+    margin-right: rem(12px);
+    width: rem(40px);
+
+    img {
+      border-radius: 50%;
+    }
+
+    @include susy-media(tablet) {
+      display: block;
+    }
+  }
+
+  &__position,
+  &__name {
+    margin-left: rem(4px);
+  }
+}

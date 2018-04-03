@@ -1,0 +1,133 @@
+.grid-client {
+  padding: 63px 0 0;
+  text-align: center;
+
+  &__heading {
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0 0 41px;
+  }
+
+  &__description {
+    font-size: 21px;
+    line-height: 32px;
+    margin-bottom: 80px;
+    padding: 0 400px;
+
+    @media only screen and (max-width: $xxlarge) {
+      padding: 0 190px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      padding: 0;
+    }
+
+    @media only screen and (max-width: $large) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    @include clearfix;
+  }
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 16.3%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      display: inline-block;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      width: 16.2%;
+      padding: 0 5px;
+    }
+
+    @media only screen and (max-width: $large) {
+      margin-bottom: 15px;
+      padding: 0 15px;
+      width: 30%;
+    }
+
+    @media only screen and (max-width: $medium) {
+      margin-bottom: 15px;
+      padding: 0 15px;
+      width: 49%;
+    }
+
+    &:hover {
+      .grid-client__logo__normal {
+        display: none;
+      }
+
+      .grid-client__logo__hover {
+        display: block;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    height: 100px;
+    position: relative;
+    width: auto;
+
+    &__normal {
+      left: 31%;
+      position: absolute;
+      top:0;
+    }
+
+    &__hover {
+      display: none;
+      left: 31%;
+      position: absolute;
+      top:0;
+    }
+
+    @media only screen and (max-width: $xxlarge) {
+      &__normal {
+        left: 23%;
+      }
+
+      &__hover{
+        left: 23%;
+      }
+    }
+
+    @media only screen and (max-width: $tablet) {
+      &__normal {
+        left: 0%;
+      }
+
+      &__hover{
+        left: 0%;
+      }
+    }
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  &__link {
+    a {
+      margin: 70px 0;
+      color: $white;
+      padding-left: 130px;
+      padding-right: 130px;
+
+      @media only screen and (max-width: 480px) {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+    }
+  }
+}

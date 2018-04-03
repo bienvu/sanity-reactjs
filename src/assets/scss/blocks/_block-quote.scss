@@ -1,0 +1,17 @@
+.block-quote {
+  clear: both;
+  padding: rem(30px 10px);
+
+  @include susy-media(tablet) {
+    padding: rem(60px 10px);
+  }
+
+  &__author {
+    display: block;
+
+    &:before {
+      content: "\2013";
+      margin-right: rem(5px);
+    }
+  }
+}

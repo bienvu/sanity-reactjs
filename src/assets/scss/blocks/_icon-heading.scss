@@ -1,0 +1,45 @@
+.icon-heading {
+  height: rem(350px);
+  background-position: center center;
+  background-size: cover;
+
+  @include susy-media(mobileTabletOnly) {
+    text-align: center;
+  }
+
+  .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  &__icon {
+    img {
+      float: none;
+      max-height: 160px;
+      width: auto;
+      display: inline-block;
+
+      @include susy-media(desktop) {
+        float: left;
+        max-height: 250px;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+
+    @media only screen and (max-width: $medium) {
+      font-size: 300%;
+    }
+
+    @include susy-media(desktop) {
+      float: left;
+      margin-left: 47px;
+      margin-top: 65px;
+      width: 70%;
+    }
+  }
+}

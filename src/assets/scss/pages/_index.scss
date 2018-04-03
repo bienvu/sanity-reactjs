@@ -1,0 +1,236 @@
+// INDEX
+// Please define all styles for the index page in this file.
+// For each new page template added to /templates/pages/*.twig,
+// please add a corresponding file in /assets/scss/pages/*.scss.
+
+.welcome-paragraph {
+  padding: rem(40px 0);
+}
+
+.path-frontpage {
+  background: white;
+
+  #block-languagedetect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 501;
+    width: 100%;
+  }
+  &.toolbar-horizontal {
+    #block-languagedetect {
+      top: 40px;
+    }
+  }
+  &.toolbar-tray-open {
+    #block-languagedetect {
+      top: 81px;
+    }
+  }
+}
+
+.front {
+  .region-content {
+    padding-top: 0;
+  }
+  .section {
+    margin: 0;
+  }
+  .front__intro {
+    overflow: hidden;
+    .container {
+      overflow: hidden;
+    }
+    span {
+      color: $pink;
+    }
+    .front__intro__slides {
+      width: 100%;
+      min-height: 300px;
+      position: relative;
+      z-index: 98;
+      @media only screen and (min-width: $large) {
+        min-height: 550px;
+      }
+      @media only screen and (min-width: $xxlarge) {
+        min-height: 800px;
+      }
+    }
+    .front__intro__overlay {
+      width: 100%;
+      height: 100%;
+      background: $light-grey;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 98;
+    }
+    .front__text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transform: translateY(-50%);
+      h2 {
+        margin-bottom: 0;
+        font-size: 240%;
+        @media only screen and (min-width: $large) {
+          font-size: 400%;
+        }
+      }
+      &.front__text__small {
+        h2 {
+          @media only screen and (max-width: $medium) {
+            font-size: 220%;
+          }
+        }
+      }
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  .front__text {
+    display: block;
+    padding: 60px 0;
+    @media only screen and (min-width: $large) {
+      padding: 100px 100px;
+    }
+    @media only screen and (min-width: $xlarge) {
+      padding: 150px 150px;
+    }
+    @media only screen and (min-width: $xxlarge) {
+      padding: 200px 200px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      @media only screen and (min-width: $large) {
+        margin-bottom: 40px;
+      }
+    }
+    p {
+      font-size: 120%;
+      color: $dark-blue;
+      a {
+        color: inherit;
+        text-decoration: underline;
+        font-family: 'MarkWebProMedium';
+      }
+    }
+  }
+
+  .front__work {
+    z-index: 100;
+    position: relative;
+  }
+
+  .front__approach {
+    width: 100%;
+    display: table;
+    margin-bottom: 50px;
+    .front__approach__improve,
+    .front__approach__create {
+      padding: 30px;
+      @media only screen and (min-width: $xlarge) {
+        width: (100% / 2);
+        display: table-cell;
+        padding: 50px;
+      }
+      @media only screen and (min-width: $xxlarge) {
+        padding: 180px 80px 220px 80px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+        @media only screen and (min-width: $large) {
+          margin-bottom: 80px;
+        }
+        @media only screen and (min-width: $xxlarge) {
+          width: 140px;
+          height: 140px;
+          margin-bottom: 100px;
+        }
+      }
+      p {
+        font-size: 130%;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        strong {
+          font-family: 'MarkWebProMedium';
+        }
+      }
+      ul {
+        margin-top: 20px;
+        li {
+          font-size: 120%;
+          margin-bottom: 5px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+    .front__approach__improve {
+      background: $pink;
+      color: $dark-blue;
+    }
+    .front__approach__create {
+      background: $dark-blue;
+      color: white;
+    }
+  }
+
+  .front__life {
+    padding-top: 88px;
+    h2 {
+      text-align: center;
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 0 41px;
+    }
+
+    article {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .more-link {
+    text-align: center;
+    a {
+      background: $pink-light;
+      text-transform: uppercase;
+      color: white;
+      padding: 11px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+      margin: 70px 0;
+      display: inline-block;
+      width: 365px;
+      &:hover {
+        color: black;
+        background: #CBCBCB;
+        border-bottom-right-radius: 20px;
+      }
+      @media only screen and (max-width: $tablet) {
+        width: 295px;
+      }
+      @media only screen and (max-width: $medium) {
+        width: 280px;
+      }
+    }
+  }
+}

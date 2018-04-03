@@ -1,0 +1,78 @@
+.job-list {
+  padding: rem(40px 0);
+
+  @include susy-media(tablet) {
+    padding: rem(100px 0);
+  }
+
+  &__group {
+    margin-bottom: 40px;
+
+    @include susy-media(tablet) {
+      margin-bottom: 60px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &__name {
+      color: $blue-11;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      @include susy-media(tablet) {
+        align-items: stretch;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+      }
+    }
+
+    &__item {
+      margin: 0 10px 10px 0;
+
+      @include susy-media(tablet) {
+        width: calc((100% - #{rem(10px)})/2);
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        a {
+          padding: 20px;
+        }
+      }
+
+      a {
+        @include MarkWebProMedium;
+        color: $blue-11;
+        background: white;
+        display: block;
+        font-size: rem(18px);
+        padding: 15px;
+
+        &:hover {
+          color: $white;
+          opacity: 1;
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &.text--light {
+    .job-list__group__name {
+      color: $white;
+    }
+  }
+
+  &.bg--primary {
+    a {
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}

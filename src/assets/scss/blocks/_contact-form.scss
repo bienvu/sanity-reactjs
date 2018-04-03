@@ -1,0 +1,84 @@
+.contact-form {
+  &__inner {
+    background: $light-grey;
+    color: $dark-blue;
+    padding: 40px 30px;
+
+    @include susy-media(tablet) {
+      margin: 0 40px;
+      padding: 50px;
+    }
+  }
+
+  form {
+    background: transparent;
+    padding: 0;
+    position: relative;
+
+    label {
+      display: block;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.2em;
+      margin-bottom: 20px;
+      padding-top: 0.3em;
+    }
+
+    .form-text,
+    .form-select {
+      background: $white;
+      height: rem(55px);
+      padding: rem(5px);
+    }
+
+    .form-select {
+      appearance: none;
+      background-color: $white;
+      background-image: url($image-path + 'select-icon.svg');
+      background-position: center right rem(10px);
+      background-repeat: no-repeat;
+      background-size: rem(14px) auto;
+    }
+
+    textarea {
+      background: $white;
+      height: rem(300px);
+    }
+  }
+
+  .form-item {
+    @media only screen and (min-width: $large) {
+      @include with-layout($susy-forms) {
+        @include span(10 of 20 after);
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(7){
+        @include with-layout($susy-forms) {
+          @include omega;
+        }
+      }
+
+      &:nth-of-type(7) {
+        height: calc(100% - 196px);
+        position: absolute;
+        right: 0;
+        top: rem(121px);
+
+        textarea {
+          height: rem(420px);
+        }
+      }
+    }
+  }
+
+  .form-actions {
+    clear: both;
+    text-align: right;
+
+    .form-submit {
+      font-family: inherit;
+      padding: rem(15px 97px 11px);
+    }
+  }
+}

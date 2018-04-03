@@ -1,0 +1,84 @@
+.block-filter {
+  background-color: $gray-f7;
+
+  form {
+    padding: 40px 0;
+    background: transparent;
+  }
+
+  .form--inline {
+    @include susy-media(mobileLandscape) {
+      align-items: stretch;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    > .form-item {
+      margin: rem(0 0 15px);
+
+      @include susy-media(mobileLandscape) {
+        margin: rem(0 20px 0 0);
+        width: calc((100% - #{2 * rem(20px)})/3);
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @include susy-media(tablet) {
+        margin: rem(0 40px 0 0);
+        width: calc((100% - #{2 * rem(40px)})/3);
+      }
+    }
+
+    .form-select {
+      font-size: rem(14px);
+
+      @include susy-media(desktopSuperWide) {
+        font-size: 16px;
+      }
+    }
+
+    .form-text,
+    .form-select {
+      @include MarkWebProMedium;
+      color: $blue-11;
+      background: $white;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+
+    .form-type-textfield {
+      position: relative;
+
+      &:before {
+        @extend %icons;
+        @extend .icon-search;
+        background: $white;
+        font-size: 15px;
+        height: 100%;
+        padding: 13px 15px 13px 2px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include susy-media(mobileLandscapeTablet) {
+          font-size: 12px;
+          padding: 15px 15px 13px 5px;
+        }
+
+        @include susy-media(desktopSuperWide) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .form-text {
+      font-style: italic;
+    }
+  }
+}

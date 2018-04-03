@@ -1,0 +1,84 @@
+footer {
+  padding: 50px 0;
+  clear: both;
+
+  @media only screen and (min-width: $large) {
+    padding: 100px 0;
+  }
+
+  @media only screen and (min-width: $xxlarge) {
+    padding: 150px 0;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+}
+
+.menu--footer {
+  @include clearfix();
+  margin: 0 auto 20px auto;
+  position: relative;
+
+  @media only screen and (min-width: $large) {
+    max-width: 600px;
+    float: left;
+    text-align: left;
+    margin: 0 auto 40px auto;
+  }
+
+  @media only screen and (min-width: $xlarge) {
+    max-width: none;
+  }
+
+  ul {
+    text-align: center;
+    @media only screen and (min-width: $large) {
+      text-align: left;
+    }
+  }
+
+  li {
+    width: (100% / 2);
+    margin: 5px 0;
+    float: left;
+
+    @media only screen and (min-width: $medium) {
+      width: (100% / 3);
+    }
+
+    @media only screen and (min-width: $large) {
+      width: auto;
+      margin: 0 0;
+      float: none;
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    a {
+      font-size: 90%;
+      display: block;
+      color: $dark-blue;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.footer__legal {
+  clear: both;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+  font-size: 70%;
+  opacity: 0.4;
+  br {
+    @media only screen and (min-width: $large) {
+      display: none;
+    }
+  }
+}
+

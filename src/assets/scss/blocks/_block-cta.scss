@@ -1,0 +1,116 @@
+.block-cta {
+  background: $gray-f2;
+  padding: rem(40px 0 80px);
+
+  &__heading {
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0 0 41px;
+    text-align: center;
+  }
+
+  &__grid {
+    @include susy-media(tablet) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    background-attachment: scroll;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 220px;
+    margin: rem(0 0 15px);
+    overflow: hidden;
+    position: relative;
+
+    @include susy-media(mobileOnly) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @include susy-media(tablet) {
+      margin: rem(0 0 15px 15px);
+    }
+
+    @include susy-media(tabletOnly) {
+      width: calc((100% - #{rem(15px)})/2 - #{rem(1px)});
+
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+      }
+
+      &:nth-child(3n) {
+        width: 100%;
+
+        .block-cta__image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    @include susy-media(desktop) {
+      width: calc((100% - #{2 * rem(15px)})/3 - #{rem(1px)});
+
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__content {
+    align-content: stretch;
+    align-items: stretch;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    left: 0;
+    padding: 50px 20px 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 2;
+
+    @include susy-media(desktop) {
+      padding: 50px 45px 30px;
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    padding: rem(11px 20px);
+
+    @include susy-media(mobileOnly) {
+      width: 65%;
+    }
+
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+    }
+
+    @include susy-media(tabletOnly) {
+      width: 85%;
+    }
+  }
+
+  &__link {
+    align-self: flex-end;
+    width: 100%;
+  }
+}

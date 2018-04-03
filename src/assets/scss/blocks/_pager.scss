@@ -1,0 +1,38 @@
+.pager {
+  @include clearfix;
+}
+
+.list__pagination {
+  @include clearfix;
+  border-top: 1px solid $light-grey - 20;
+  font-size: 150%;
+  margin-top: 30px;
+  padding: 50px 0 80px;
+  text-align: center;
+
+  @media only screen and (min-width: $large) {
+    margin-top: 50px;
+    padding: 90px 0 100px;
+  }
+
+  .list__pagination__prev,
+  .list__pagination__next {
+    &.disabled {
+      color: $dark-blue;
+      opacity: 0.5;
+    }
+  }
+
+  .list__pagination__prev {
+    @include span(1);
+    @include push(1);
+  }
+
+  .list__pagination__prev__page {
+    @include span(4);
+  }
+
+  .list__pagination__next {
+    @include span(1);
+  }
+}

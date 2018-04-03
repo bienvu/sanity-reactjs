@@ -1,0 +1,164 @@
+.article-list {
+  padding-top: 100px;
+
+  .article-author {
+    margin-bottom: 20px;
+
+    &__picture {
+      height: rem(30px);
+      margin-right: rem(12px);
+      width: rem(30px);
+      float: left;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &__position,
+    &__name {
+      margin-left: rem(4px);
+    }
+
+    &__name {
+      @include MarkWebProMedium;
+      color: $blue-11;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &__group {
+      @include susy-media(desktop) {
+        padding: rem(5px);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(15px);
+  }
+
+  &__body {
+    margin-bottom: rem(20px);
+
+    * {
+      @include MarkWebPro;
+      font-size: rem(16px);
+      letter-spacing: 0;
+    }
+  }
+
+  &__meta {
+    @include clearfix;
+    font-size: 80%;
+    margin-bottom: rem(20px);
+  }
+
+  &__tags,
+  &__datetime {
+    float: left;
+  }
+
+  &__datetime {
+    color: $gray-ad;
+    margin: 0 40px 5px 0;
+  }
+
+  &__tags {
+    &__item {
+      display: inline-block;
+      margin: 0 5px 5px;
+
+      a {
+        color: $gray-ad;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &__link {
+    a {
+      @include MarkWebProMedium;
+      font-weight: 400;
+      font-size: 70%;
+    }
+  }
+
+  &__image {
+    float: right;
+
+    @include susy-media(mobileOnly) {
+      display: none;
+    }
+
+    img {
+      width: 200px;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    justify-content: start-flex;
+    padding: rem(40px 0 50px);
+    vertical-align: middle;
+    position: relative;
+
+    &:after {
+      border-bottom: 1px solid $light-grey - 20;
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+
+      @include susy-media(tablet) {
+        left: -30px;
+        right: -30px;
+      }
+    }
+
+    &:last-of-type {
+      &:after {
+        border-bottom: 0;
+      }
+    }
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  &__left {
+    @include susy-media(tablet) {
+      padding-right: 15px;
+      width: 70%;
+    }
+
+    @include susy-media(desktop) {
+      padding-right: 50px;
+      width: 60%;
+    }
+  }
+
+  &__right {
+    @include susy-media(tablet) {
+      width: 30%;
+    }
+
+    @include susy-media(desktop) {
+      width: 40%;
+    }
+  }
+
+  &.work-list {
+    .article-list__image img {
+      width: auto;
+    }
+  }
+}

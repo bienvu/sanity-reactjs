@@ -1,0 +1,38 @@
+.block-text {
+  padding-bottom: 25px;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 5px;
+  }
+
+  &__content {
+    font-size: 120%;
+    margin-bottom: 35px;
+
+    @include susy-media(tablet) {
+      font-size: 140%;
+    }
+  }
+
+  &--small {
+    padding-bottom: 0;
+
+    .container {
+      @include span(8);
+
+      @media only screen and (min-width: $large) {
+        @include span(6);
+        @include push(1);
+        padding: 0;
+      }
+      @media only screen and (min-width: $xxlarge) {
+        @include span(5 of 8);
+        @include push(1.5);
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 15px;
+    }
+  }
+}

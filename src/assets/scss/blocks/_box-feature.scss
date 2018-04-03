@@ -1,0 +1,35 @@
+.box-feature {
+  padding: 20px 0 50px;
+
+  &__inner {
+    @include susy-media(mobileLandscape) {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__text {
+    font-size: 120%;
+
+    @include susy-media(mobileLandscape) {
+      width: 70%;
+      padding-right: 20%;
+      font-size: 140%;
+    }
+
+    @include susy-media(mobileLandscapeTabletOnly) {
+      padding-right: 50px;
+    }
+  }
+
+  &__media {
+    display: none;
+
+    @include susy-media(mobileLandscape) {
+      display: block;
+      width: 30%;
+    }
+  }
+}

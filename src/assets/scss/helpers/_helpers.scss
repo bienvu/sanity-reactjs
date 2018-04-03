@@ -1,0 +1,506 @@
+// Helper classes
+
+.font {
+  &--small {
+    font-size: rem(14px);
+  }
+
+  &--tiny {
+    font-size: rem(13px);
+  }
+
+  &--large {
+    font-size: 120%;
+
+    @include susy-media(tablet) {
+      font-size: 140%;
+    }
+  }
+}
+
+.granite-green {
+  color: $gray-89;
+}
+
+.mist-gray {
+  color: $silver;
+}
+
+.blue {
+  color: $blue;
+}
+
+.white {
+  color: $white;
+}
+
+.text-dark,
+%text-dark {
+  color: $black;
+}
+
+.text-light,
+%text-light {
+  color: $white;
+}
+
+.text-primary,
+%text-primary {
+  color: $primary-color;
+}
+
+.text-secondary,
+%text-secondary {
+  color: $secondary-color;
+}
+
+.link-light,
+%link-light {
+  a {
+    &,
+    &:visited {
+      @extend %text-light;
+
+      &:active,
+      &:hover {
+        @extend %text-light;
+        opacity: .8;
+      }
+    }
+  }
+}
+
+.link-dark,
+%link-dark {
+  a {
+    &,
+    &:visited {
+      @extend %text-dark;
+
+      &:active,
+      &:hover {
+        @extend %text-dark;
+        opacity: .7;
+      }
+    }
+
+    &.btn--primary {
+      &,
+      &:visited {
+        @extend %text-light;
+
+        &:active,
+        &:hover {
+          @extend %text-light;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+%link-primary {
+  a {
+    &,
+    &:visited {
+      @extend %text-primary;
+
+      &:active,
+      &:hover {
+        @extend %text-primary;
+        opacity: .7;
+      }
+    }
+  }
+}
+
+%link-secondary {
+  a {
+    &,
+    &:visited {
+      @extend %text-secondary;
+
+      &:active,
+      &:hover {
+        @extend %text-secondary;
+        opacity: .7;
+      }
+    }
+  }
+}
+
+%text-primary-on-light {
+  .bg--light & {
+    @extend %text-primary;
+  }
+}
+
+%link-primary-on-light {
+  .bg--light & {
+    @extend %link-primary;
+  }
+}
+
+%text-secondary-on-light {
+  .bg--light & {
+    @extend %text-secondary;
+  }
+}
+
+%link-secondary-on-light {
+  .bg--light & {
+    @extend %link-secondary;
+  }
+}
+
+.bg {
+  &--light {
+    $root: &;
+    // @extend %text-dark;
+    position: relative;
+
+    &,
+    .bg--dark & {
+      // @extend %link-dark;
+    }
+
+    &-white {
+      @extend #{$root};
+      background-color: $white;
+    }
+
+    &-beige {
+      @extend #{$root};
+      background-color: $light-beige;
+    }
+
+    &-loblolly {
+      @extend #{$root};
+      background-color: $light-loblolly;
+    }
+
+    &-pigeon {
+      @extend #{$root};
+      background-color: $pigeon-post;
+    }
+
+    &-gray {
+      @extend #{$root};
+      background-color: $gray-f7;
+    }
+
+    &--transparent {
+      @extend #{$root};
+      background-color: rgba($white, .8);
+    }
+  }
+
+  &--dark {
+    $root: &;
+    @extend %text-light;
+    position: relative;
+
+    &-black {
+      $var: &;
+      @extend #{$root};
+      background-color: $dark-black;
+
+      &--overlay {
+        @extend #{$var};
+        @include bgOverlay($black);
+      }
+
+      &--transparent {
+        @extend #{$root};
+        background-color: rgba($black, .5);
+      }
+    }
+
+    &-cgray {
+      $var: &;
+      @extend #{$root};
+      background-color: $dark-cgray;
+
+      &--overlay {
+        @extend #{$var};
+        @include bgOverlay($dark-cgray);
+      }
+    }
+
+    &-green  {
+      $var: &;
+      @extend #{$root};
+      background-color: $green;
+
+      &--overlay {
+        @extend #{$var};
+        @include bgOverlay($green);
+      }
+    }
+
+    &-blue {
+      $var: &;
+      @extend #{$root};
+      background-color: $blue-11;
+
+      &--overlay {
+        @extend #{$var};
+        @include bgOverlay($blue-11, .8);
+      }
+    }
+
+    &-red {
+      $var: &;
+      @extend #{$root};
+      background-color: $red-9c;
+
+      &--overlay {
+        @extend #{$var};
+        @include bgOverlay($red-9c);
+      }
+    }
+
+    &-pink {
+      $var: &;
+      @extend #{$root};
+      background-color: $pink;
+
+      &--gradient {
+        @extend #{$var};
+        @include linear-gradient($pink, .2);
+      }
+    }
+  }
+
+  &--primary {
+    $var: &;
+    @extend %link-light;
+    @extend %text-light;
+    background-color: $primary-color;
+    position: relative;
+
+    &--overlay {
+      @extend #{$var};
+      @include bgOverlay($primary-color);
+    }
+  }
+
+  &--secondary {
+    $var: &;
+    @extend %text-light;
+    @extend %link-light;
+    background-color: $secondary-color;
+    position: relative;
+
+    &--overlay {
+      @extend #{$var};
+      @include bgOverlay($secondary-color);
+    }
+  }
+
+  &--text {
+    background-color: $text-color;
+  }
+}
+
+.text {
+  &--white {
+    color: $white;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--light {
+    color: $white;
+    @extend %link-light;
+  }
+}
+
+.video-wrap {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  margin-bottom: rem(20px);
+
+  video,
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__title {
+    @extend %text-primary-on-light;
+    font-size: rem(24px);
+    line-height: rem(29px);
+    margin: rem(0 0 3px);
+  }
+
+  &__description {
+    margin-bottom: rem(20px);
+  }
+}
+
+.reset-video-embed-field,
+%reset-video-embed-field {
+  .video-embed-field-responsive-video {
+    position: static;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+%list,
+.list {
+  margin: rem(0 0 60px 18px);
+
+  li {
+    margin-bottom: rem(5px);
+    font-size: 120%;
+
+    @include susy-media(tablet) {
+      font-size: 140%;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &--dot {
+    list-style: disc;
+  }
+}
+
+%list-in-article,
+.list-in-article {
+  ul {
+    @extend %list;
+    @extend %list--dot;
+  }
+}
+
+
+ol {
+  @extend %list;
+  list-style-type: decimal;
+}
+
+.section-title {
+  color: $blue-11;
+  font-size: 30px;
+  line-height: 50px;
+  margin: 40px 0 20px;
+  text-align: center;
+
+  @include susy-media(tablet) {
+    margin: 50px 0 20px;
+    font-size: 35px;
+  }
+
+  @include susy-media(desktop) {
+    margin: 90px 0 41px;
+    font-size: 42px;
+  }
+}
+
+.read-more,
+.link-btn-wrap {
+  display: block;
+  clear: both;
+  text-align: center;
+
+  a {
+    background-color: $pink-light;
+    text-transform: uppercase;
+    padding: 11px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 11px 30px;
+    color: $white !important;
+
+    &:hover {
+      color: $black !important;
+      background-color: #CBCBCB;
+      border-bottom-right-radius: 20px;
+    }
+
+    @include susy-media(tablet) {
+      margin-top: 40px;
+      font-size: 14px;
+      padding: 11px 60px;
+    }
+  }
+}
+
+.link--arrow {
+  transition: all 0.3s ease;
+  color: $secondary-color;
+  display: inline-block;
+  font-size: rem(24px);
+  font-weight: bold;
+  padding-left: rem(35px);
+  position: relative;
+
+  &:before {
+    @extend %icons;
+    @extend .icon-arrow-left2;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.arrow-down {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+  bottom: 30px;
+  display: inline-block;
+  height: 0;
+  margin-top: 247px;
+  opacity: 0.5;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  width: 0;
+  z-index: 9999;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    margin-top: 92px;
+    visibility: hidden;
+  }
+
+  @media only screen and (max-width: $medium) {
+    margin-top: 5px;
+    visibility: hidden;
+  }
+}

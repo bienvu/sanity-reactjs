@@ -1,0 +1,38 @@
+.page-heading {
+  &__inner {
+    padding: rem(40px 0);
+
+    @include susy-media(tablet) {
+      padding: rem(100px 0 80px);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(20px);
+  }
+
+  &__description {
+    font-size: rem(24px);
+    line-height: rem(36px);
+  }
+
+  &.text {
+    @include susy-media(desktop) {
+      &--center {
+        padding: rem(0 120px);
+      }
+
+      &--left {
+        .page-heading__inner {
+          padding-right: rem(140px);
+        }
+      }
+
+      &--right {
+        .page-heading__inner {
+          padding-left: rem(140px);
+        }
+      }
+    }
+  }
+}

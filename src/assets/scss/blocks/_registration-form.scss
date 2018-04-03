@@ -1,0 +1,51 @@
+.registration-form {
+  padding: rem(60px 0);
+
+  h4 {
+    margin-bottom: 1em;
+  }
+
+  form {
+    @extend %form-style;
+    background-color: transparent;
+    padding: 0;
+
+    @include susy-media(mobileLandscape) {
+      align-items: flex-end;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .form-item,
+    .form-actions {
+      margin: rem(0 0 30px);
+
+      @include susy-media(mobileLandscape) {
+        margin: rem(0 30px 30px 0);
+        width: calc((100% - #{2 * rem(30px)})/3);
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      .form-text,
+      .form-select {
+        height: rem(35px);
+        padding: rem(5px);
+      }
+    }
+
+    .form-actions {
+      height: 35px;
+      margin-right: 0;
+
+      .form-submit {
+        font-size: 70%;
+        padding: rem(7px);
+        width: 100%;
+      }
+    }
+  }
+}

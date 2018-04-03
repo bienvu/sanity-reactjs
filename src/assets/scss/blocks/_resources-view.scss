@@ -1,0 +1,134 @@
+.resources-view {
+  &__heading {
+    padding-top: rem(45px);
+
+    & + .resources-view__grid {
+      @include susy-media(mobileLandscape) {
+        padding: rem(40px 0 60px);
+      }
+    }
+  }
+
+  &__grid {
+    padding: rem(35px 0 20px);
+
+    @include susy-media(mobileLandscape) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    margin: rem(0 0 40px);
+    position: relative;
+    width: 100%;
+
+    @media only screen and (max-width: $medium) {
+      border-bottom: 1px solid $lighter-grey;
+      padding-bottom: 35px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+
+    @include susy-media(mobileLandscapeTabletOnly) {
+      margin: rem(0 0 30px 30px);
+      width: calc((100% - #{rem(30px)})/2 - #{rem(1px)});
+
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+      }
+    }
+
+    @include susy-media(desktop) {
+      margin: rem(0 0 80px 80px);
+      width: calc((100% - #{2 * rem(80px)})/3 - #{rem(1px)});
+
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+
+    @include susy-media(desktopWide) {
+      margin: rem(0 0 80px 170px);
+      width: calc((100% - #{2 * rem(170px)})/3 - #{rem(1px)});
+
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__link-img {
+    a {
+      align-items: center;
+      background-clip: padding-box;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      height: 250px;
+      justify-content: center;
+      position: relative;
+      transition: background-color 0.8s ease;
+      width: 100%;
+
+      @media only screen  and (min-width:$xxlarge) {
+        height: 300px;
+      }
+
+      &:hover {
+        @extend .bg--dark-blue--overlay;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-color: #000;
+        color: $white;
+
+        .read-more {
+          color: $white;
+          border: rem(2px) solid $white;
+          opacity: 1;
+          padding: rem(15px 20px);
+          transition: all .2s ease .15s;
+        }
+      }
+    }
+
+    .read-more {
+      opacity: 0;
+      color: $white;
+      font-weight: bold;
+      padding: 0;
+      position: relative;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+  }
+
+  &__type {
+    font-size: 0.9em;
+    padding: rem(10px 0);
+    color: $pink-light;
+    font-size: 120%;
+  }
+
+  &__title {
+    a {
+      color: $dark-blue;
+      font-family: MarkWebProMedium;
+      font-size: 18px;
+    }
+  }
+
+  &.text--light {
+    @extend %link-light;
+
+    .resources-view__type {
+      color: $white;
+    }
+  }
+}

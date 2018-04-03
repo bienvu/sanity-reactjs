@@ -1,0 +1,64 @@
+.block-contact {
+  color: $white;
+  padding: 0 0 50px;
+  margin-bottom: rem(40px);
+
+  @include susy-media(tablet) {
+    min-height: rem(900px);
+    background-size: cover;
+    padding: rem(100px 0 50px);
+  }
+
+  @include susy-media(mobileOnly) {
+    background-image: none !important;
+  }
+
+  .container {
+    @include susy-media(mobileOnly) {
+      padding: 0;
+    }
+  }
+
+  &__intro {
+    background-size: cover;
+
+    @include susy-media(tablet) {
+      background-image: none !important;
+    }
+  }
+
+  .page-heading,
+  .contact-form {
+    .container {
+      max-width: none;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .page-heading {
+    padding: rem(40px);
+
+    @include susy-media(tablet) {
+      padding: 0;
+    }
+
+    &__inner {
+      padding: 0;
+    }
+  }
+
+  .contact-form__inner {
+    padding: 0;
+    margin: 0;
+
+    @include susy-media(tablet) {
+      background: transparent;
+      color: $white;
+    }
+
+    .form-actions {
+      text-align: center;
+    }
+  }
+}

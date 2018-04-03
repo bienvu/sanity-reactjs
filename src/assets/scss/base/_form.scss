@@ -1,0 +1,47 @@
+button,
+input[type='submit'] {
+  @extend .btn;
+  // max-width: 238px;
+  appearance: none;
+}
+
+.form-item {
+  margin-bottom: 20px;
+
+  &.required {
+    label:after {
+      background-image: url($image-path + 'required.svg');
+      background-repeat: no-repeat;
+      background-size: 6px 6px;
+      content: '';
+      display: inline-block;
+      height: 6px;
+      margin: 0 0.3em;
+      vertical-align: super;
+      width: 6px;
+    }
+  }
+}
+
+.form-text,
+.form-select {
+  width: 100%;
+  border: 0;
+  outline: none;
+
+}
+
+.form-textarea {
+  min-height: rem(300px);
+  height: auto;
+}
+
+.form-select,
+.form-textarea,
+.form-text {
+  border: 1px solid transparent;
+
+  &:hover {
+    // border-color: $grey;
+  }
+}

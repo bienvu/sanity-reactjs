@@ -1,0 +1,217 @@
+.icon-grid {
+  &__inner {
+    margin: 0 0 100px;
+    min-height: 1002px;
+    position: relative;
+
+    @media only screen and (max-width: $xlarge) {
+      margin: 0 auto 50px;
+      max-width: 900px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      min-height: 778px;
+    }
+
+    @media only screen and (max-width: $large) {
+      min-height: 790px;
+    }
+
+    @media only screen and (max-width: $medium) {
+      min-height: 1300px;
+    }
+  }
+
+  &__item {
+    background-position: center;
+    background-size: cover;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: 0.2s linear;
+
+    &:after {
+      transition: all 0.2s linear;
+    }
+
+    &:nth-of-type(1) {
+      height: 663px;
+      width: 621px;
+
+      @media only screen and (max-width: $xlarge) {
+        width: 560px;
+      }
+      @media only screen and (max-width: $tablet) {
+        height: 509px;
+        width: 380px;
+      }
+
+      @media only screen and (max-width: $large) {
+        height: 449px;
+        width: calc(55% - 10px);
+      }
+
+      @media only screen and (max-width: $medium) {
+        height: 440px;
+        width: 100%;
+      }
+    }
+
+    &:nth-of-type(2) {
+      height: 491px;
+      left: 642px;
+      width: 365px;
+
+      @media only screen and (max-width: $xlarge) {
+        left: 580px;
+        width: 320px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        height: 379px;
+        left: 400px;
+        width: 300px;
+      }
+
+      @media only screen and (max-width: $large) {
+        height: 319px;
+        left: calc(55% + 10px);
+        width: calc(45% - 10px);
+      }
+
+      @media only screen and (max-width: $medium) {
+        height: 250px;
+        left: 0;
+        top: 460px;
+        width: 100%;
+      }
+    }
+
+    &:nth-of-type(3) {
+      height: 319px;
+      top: 683px;
+      width: 621px;
+
+      @media only screen and (max-width: $xlarge) {
+        width: 560px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        height: 250px;
+        top: 529px;
+        width: 380px;
+      }
+
+      @media only screen and (max-width: $large) {
+        top: 469px;
+        width: calc(55% - 10px);
+      }
+
+      @media only screen and (max-width: $medium) {
+        height: 250px;
+        top: 730px;
+        width: 100%;
+      }
+    }
+
+    &:nth-of-type(4) {
+      background-position: center right;
+      height: 491px;
+      left: 642px;
+      top: 511px;
+      width: 365px;
+
+      @media only screen and (max-width: $xlarge) {
+        left: 580px;
+        width: 320px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        height: 379px;
+        left: 400px;
+        top: 399px;
+        width: 300px;
+      }
+
+      @media only screen and (max-width: $large) {
+        left: calc(55% + 10px);
+        top: 339px;
+        width: calc(45% - 10px);
+      }
+
+      @media only screen and (max-width: $medium) {
+        height: 250px;
+        left: 0;
+        top: 1000px;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      border-bottom-right-radius: 20px;
+
+      &:after {
+        border-bottom-right-radius: 20px;
+        opacity: 0.85;
+      }
+    }
+  }
+
+  &__content {
+    align-content: stretch;
+    align-items: stretch;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    left: 0;
+    padding: rem(10px);
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 2;
+  }
+
+  &__title {
+    color: white;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 20px 0 0;
+
+    @media only screen and (max-width: $tablet) {
+      line-height: 29px;
+      font-size: 24px;
+    }
+  }
+
+  &__icon {
+    img {
+      display: inline-block;
+
+      @media only screen and (max-width: $tablet) {
+        width: 140px;
+      }
+    }
+  }
+
+  &__link {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+
+    a {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      text-indent: -999em;
+      width: 100%;
+    }
+  }
+}

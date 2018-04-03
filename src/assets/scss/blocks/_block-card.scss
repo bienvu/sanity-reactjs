@@ -1,0 +1,101 @@
+.block-card {
+  @extend %clearfix;
+  padding-bottom: rem(30px);
+
+  @include susy-media(tablet) {
+    padding-bottom: rem(70px);
+  }
+
+  &__heading {
+    color: $text-color;
+    font-size: rem(30px);
+    margin: 40px 0 20px;
+    text-align: center;
+
+    @include susy-media(tablet) {
+      font-size: rem(35px);
+    }
+
+    @include susy-media(desktop) {
+      font-size: rem(42px);
+      margin: 40px 0;
+    }
+  }
+
+  &__item {
+    margin: rem(0 0 30px);
+
+    @include susy-media(mobileOnly) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @include susy-media(tablet) {
+      margin: rem(0 30px 30px 0);
+      width: calc((100% - #{2 * rem(30px)})/3);
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 rem(15px);
+    font-size: rem(24px);
+  }
+
+  &__links {
+    a {
+      @include MarkWebProBold;
+      color: $red-ff;
+      font-size: rem(15px);
+      text-transform: capitalize;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__image {
+    line-height: 0;
+    margin-bottom: rem(30px);
+
+    @include susy-media(desktop) {
+      margin-bottom: rem(47px);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    margin-bottom: rem(20px);
+    font-size: rem(16px);
+  }
+
+  &__grid {
+    @include susy-media(tablet) {
+      align-items: stretch;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &.text--light {
+    .block-card__heading {
+      color: $white;
+    }
+  }
+
+  &.bg--secondary,
+  &.bg--dark-pink {
+    .block-card__links a {
+      color: $primary-color;
+    }
+  }
+}

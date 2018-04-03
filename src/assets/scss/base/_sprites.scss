@@ -1,0 +1,593 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$create-large-name: 'create-large';
+$create-large-x: 40px;
+$create-large-y: 0px;
+$create-large-offset-x: -40px;
+$create-large-offset-y: 0px;
+$create-large-width: 40px;
+$create-large-height: 40px;
+$create-large-total-width: 124px;
+$create-large-total-height: 114px;
+$create-large-image: '../images/sprites/sprite.png';
+$create-large: (40px, 0px, -40px, 0px, 40px, 40px, 124px, 114px, '../images/sprites/sprite.png', 'create-large', );
+$create-small-name: 'create-small';
+$create-small-x: 30px;
+$create-small-y: 40px;
+$create-small-offset-x: -30px;
+$create-small-offset-y: -40px;
+$create-small-width: 30px;
+$create-small-height: 30px;
+$create-small-total-width: 124px;
+$create-small-total-height: 114px;
+$create-small-image: '../images/sprites/sprite.png';
+$create-small: (30px, 40px, -30px, -40px, 30px, 30px, 124px, 114px, '../images/sprites/sprite.png', 'create-small', );
+
+$fr-name: 'fr';
+$fr-x: 24px;
+$fr-y: 70px;
+$fr-offset-x: -24px;
+$fr-offset-y: -92px;
+$fr-width: 24px;
+$fr-height: 24px;
+$fr-total-width: 124px;
+$fr-total-height: 114px;
+$fr-image: '../images/sprites/sprite.png';
+$fr: (24px, 70px, -24px, -92px, 24px, 24px, 124px, 114px, '../images/sprites/sprite.png', 'fr', );
+
+$da-name: 'da';
+$da-x: 48px;
+$da-y: 70px;
+$da-offset-x: -48px;
+$da-offset-y: -70px;
+$da-width: 24px;
+$da-height: 24px;
+$da-total-width: 124px;
+$da-total-height: 114px;
+$da-image: '../images/sprites/sprite.png';
+$da: (48px, 70px, -48px, -70px, 24px, 24px, 124px, 114px, '../images/sprites/sprite.png', 'da', );
+
+$de-name: 'de';
+$de-x: 24px;
+$de-y: 70px;
+$de-offset-x: -24px;
+$de-offset-y: -70px;
+$de-width: 24px;
+$de-height: 24px;
+$de-total-width: 124px;
+$de-total-height: 114px;
+$de-image: '../images/sprites/sprite.png';
+$de: (24px, 70px, -24px, -70px, 24px, 24px, 124px, 114px, '../images/sprites/sprite.png', 'de', );
+
+$en-gb-name: 'en-gb';
+$en-gb-x: 80px;
+$en-gb-y: 0px;
+$en-gb-offset-x: -80px;
+$en-gb-offset-y: 0px;
+$en-gb-width: 24px;
+$en-gb-height: 24px;
+$en-gb-total-width: 124px;
+$en-gb-total-height: 114px;
+$en-gb-image: '../images/sprites/sprite.png';
+$en-gb: (80px, 0px, -80px, 0px, 24px, 24px, 124px, 114px, '../images/sprites/sprite.png', 'en-gb', );
+$en-name: 'en';
+$en-x: 80px;
+$en-y: 24px;
+$en-offset-x: -80px;
+$en-offset-y: -24px;
+$en-width: 24px;
+$en-height: 24px;
+$en-total-width: 124px;
+$en-total-height: 114px;
+$en-image: '../images/sprites/sprite.png';
+$en: (80px, 24px, -80px, -24px, 24px, 24px, 124px, 114px, '../images/sprites/sprite.png', 'en', );
+$facebook-blue-name: 'facebook-blue';
+$facebook-blue-x: 104px;
+$facebook-blue-y: 40px;
+$facebook-blue-offset-x: -104px;
+$facebook-blue-offset-y: -40px;
+$facebook-blue-width: 20px;
+$facebook-blue-height: 20px;
+$facebook-blue-total-width: 124px;
+$facebook-blue-total-height: 114px;
+$facebook-blue-image: '../images/sprites/sprite.png';
+$facebook-blue: (104px, 40px, -104px, -40px, 20px, 20px, 124px, 114px, '../images/sprites/sprite.png', 'facebook-blue', );
+$facebook-pink-name: 'facebook-pink';
+$facebook-pink-x: 80px;
+$facebook-pink-y: 48px;
+$facebook-pink-offset-x: -80px;
+$facebook-pink-offset-y: -48px;
+$facebook-pink-width: 20px;
+$facebook-pink-height: 20px;
+$facebook-pink-total-width: 124px;
+$facebook-pink-total-height: 114px;
+$facebook-pink-image: '../images/sprites/sprite.png';
+$facebook-pink: (80px, 48px, -80px, -48px, 20px, 20px, 124px, 114px, '../images/sprites/sprite.png', 'facebook-pink', );
+$improve-large-name: 'improve-large';
+$improve-large-x: 0px;
+$improve-large-y: 0px;
+$improve-large-offset-x: 0px;
+$improve-large-offset-y: 0px;
+$improve-large-width: 40px;
+$improve-large-height: 40px;
+$improve-large-total-width: 124px;
+$improve-large-total-height: 114px;
+$improve-large-image: '../images/sprites/sprite.png';
+$improve-large: (0px, 0px, 0px, 0px, 40px, 40px, 124px, 114px, '../images/sprites/sprite.png', 'improve-large', );
+$improve-small-name: 'improve-small';
+$improve-small-x: 0px;
+$improve-small-y: 40px;
+$improve-small-offset-x: 0px;
+$improve-small-offset-y: -40px;
+$improve-small-width: 30px;
+$improve-small-height: 30px;
+$improve-small-total-width: 124px;
+$improve-small-total-height: 114px;
+$improve-small-image: '../images/sprites/sprite.png';
+$improve-small: (0px, 40px, 0px, -40px, 30px, 30px, 124px, 114px, '../images/sprites/sprite.png', 'improve-small', );
+$instagram-blue-name: 'instagram-blue';
+$instagram-blue-x: 60px;
+$instagram-blue-y: 40px;
+$instagram-blue-offset-x: -60px;
+$instagram-blue-offset-y: -40px;
+$instagram-blue-width: 20px;
+$instagram-blue-height: 20px;
+$instagram-blue-total-width: 124px;
+$instagram-blue-total-height: 114px;
+$instagram-blue-image: '../images/sprites/sprite.png';
+$instagram-blue: (60px, 40px, -60px, -40px, 20px, 20px, 124px, 114px, '../images/sprites/sprite.png', 'instagram-blue', );
+$instagram-pink-name: 'instagram-pink';
+$instagram-pink-x: 72px;
+$instagram-pink-y: 70px;
+$instagram-pink-offset-x: -72px;
+$instagram-pink-offset-y: -70px;
+$instagram-pink-width: 20px;
+$instagram-pink-height: 20px;
+$instagram-pink-total-width: 124px;
+$instagram-pink-total-height: 114px;
+$instagram-pink-image: '../images/sprites/sprite.png';
+$instagram-pink: (72px, 70px, -72px, -70px, 20px, 20px, 124px, 114px, '../images/sprites/sprite.png', 'instagram-pink', );
+$linkedin-blue-name: 'linkedin-blue';
+$linkedin-blue-x: 104px;
+$linkedin-blue-y: 0px;
+$linkedin-blue-offset-x: -104px;
+$linkedin-blue-offset-y: 0px;
+$linkedin-blue-width: 20px;
+$linkedin-blue-height: 20px;
+$linkedin-blue-total-width: 124px;
+$linkedin-blue-total-height: 114px;
+$linkedin-blue-image: '../images/sprites/sprite.png';
+$linkedin-blue: (104px, 0px, -104px, 0px, 20px, 20px, 124px, 114px, '../images/sprites/sprite.png', 'linkedin-blue', );
+$linkedin-pink-name: 'linkedin-pink';
+$linkedin-pink-x: 104px;
+$linkedin-pink-y: 20px;
+$linkedin-pink-offset-x: -104px;
+$linkedin-pink-offset-y: -20px;
+$linkedin-pink-width: 20px;
+$linkedin-pink-height: 20px;
+$linkedin-pink-total-width: 124px;
+$linkedin-pink-total-height: 114px;
+$linkedin-pink-image: '../images/sprites/sprite.png';
+$linkedin-pink: (104px, 20px, -104px, -20px, 20px, 20px, 124px, 114px, '../images/sprites/sprite.png', 'linkedin-pink', );
+
+$sv-name: 'sv';
+$sv-x: 0px;
+$sv-y: 70px;
+$sv-offset-x: 0px;
+$sv-offset-y: -70px;
+$sv-width: 24px;
+$sv-height: 24px;
+$sv-total-width: 124px;
+$sv-total-height: 114px;
+$sv-image: '../images/sprites/sprite.png';
+$sv: (0px, 70px, 0px, -70px, 24px, 24px, 124px, 114px, '../images/sprites/sprite.png', 'sv', );
+
+$twitter-blue-name: 'twitter-blue';
+$twitter-blue-x: 104px;
+$twitter-blue-y: 60px;
+$twitter-blue-offset-x: -104px;
+$twitter-blue-offset-y: -60px;
+$twitter-blue-width: 20px;
+$twitter-blue-height: 20px;
+$twitter-blue-total-width: 124px;
+$twitter-blue-total-height: 114px;
+$twitter-blue-image: '../images/sprites/sprite.png';
+$twitter-blue: (104px, 60px, -104px, -60px, 20px, 20px, 124px, 114px, '../images/sprites/sprite.png', 'twitter-blue', );
+$twitter-pink-name: 'twitter-pink';
+$twitter-pink-x: 0px;
+$twitter-pink-y: 94px;
+$twitter-pink-offset-x: 0px;
+$twitter-pink-offset-y: -94px;
+$twitter-pink-width: 20px;
+$twitter-pink-height: 20px;
+$twitter-pink-total-width: 124px;
+$twitter-pink-total-height: 114px;
+$twitter-pink-image: '../images/sprites/sprite.png';
+$twitter-pink: (0px, 94px, 0px, -94px, 20px, 20px, 124px, 114px, '../images/sprites/sprite.png', 'twitter-pink', );
+$create-large-2x-name: 'create-large@2x';
+$create-large-2x-x: 80px;
+$create-large-2x-y: 0px;
+$create-large-2x-offset-x: -80px;
+$create-large-2x-offset-y: 0px;
+$create-large-2x-width: 80px;
+$create-large-2x-height: 80px;
+$create-large-2x-total-width: 248px;
+$create-large-2x-total-height: 228px;
+$create-large-2x-image: '../images/sprites/sprite.png';
+$create-large-2x: (80px, 0px, -80px, 0px, 80px, 80px, 248px, 228px, '../images/sprites/sprite.png', 'create-large@2x', );
+$create-small-2x-name: 'create-small@2x';
+$create-small-2x-x: 60px;
+$create-small-2x-y: 80px;
+$create-small-2x-offset-x: -60px;
+$create-small-2x-offset-y: -80px;
+$create-small-2x-width: 60px;
+$create-small-2x-height: 60px;
+$create-small-2x-total-width: 248px;
+$create-small-2x-total-height: 228px;
+$create-small-2x-image: '../images/sprites/sprite.png';
+$create-small-2x: (60px, 80px, -60px, -80px, 60px, 60px, 248px, 228px, '../images/sprites/sprite.png', 'create-small@2x', );
+
+$fr-2x-name: 'fr@2x';
+$fr-2x-x: 48px;
+$fr-2x-y: 140px;
+$fr-2x-offset-x: -94px;
+$fr-2x-offset-y: -88px;
+$fr-2x-width: 48px;
+$fr-2x-height: 48px;
+$fr-2x-total-width: 248px;
+$fr-2x-total-height: 228px;
+$fr-2x-image: '../images/sprites/sprite.png';
+$fr-2x: (190px, 175px, -190px, -175px, 48px, 48px, 248px, 228px, '../images/sprites/sprite.png', 'fr@2x', );
+
+$da-2x-name: 'da@2x';
+$da-2x-x: 96px;
+$da-2x-y: 140px;
+$da-2x-offset-x: -96px;
+$da-2x-offset-y: -140px;
+$da-2x-width: 48px;
+$da-2x-height: 48px;
+$da-2x-total-width: 248px;
+$da-2x-total-height: 228px;
+$da-2x-image: '../images/sprites/sprite.png';
+$da-2x: (96px, 140px, -96px, -140px, 48px, 48px, 248px, 228px, '../images/sprites/sprite.png', 'da@2x', );
+
+$de-2x-name: 'de@2x';
+$de-2x-x: 48px;
+$de-2x-y: 140px;
+$de-2x-offset-x: -48px;
+$de-2x-offset-y: -140px;
+$de-2x-width: 48px;
+$de-2x-height: 48px;
+$de-2x-total-width: 248px;
+$de-2x-total-height: 228px;
+$de-2x-image: '../images/sprites/sprite.png';
+$de-2x: (48px, 140px, -48px, -140px, 48px, 48px, 248px, 228px, '../images/sprites/sprite.png', 'de@2x', );
+
+$en-gb-2x-name: 'en-gb@2x';
+$en-gb-2x-x: 160px;
+$en-gb-2x-y: 0px;
+$en-gb-2x-offset-x: -160px;
+$en-gb-2x-offset-y: 0px;
+$en-gb-2x-width: 48px;
+$en-gb-2x-height: 48px;
+$en-gb-2x-total-width: 248px;
+$en-gb-2x-total-height: 228px;
+$en-gb-2x-image: '../images/sprites/sprite.png';
+$en-gb-2x: (160px, 0px, -160px, 0px, 48px, 48px, 248px, 228px, '../images/sprites/sprite.png', 'en-gb@2x', );
+$en-2x-name: 'en@2x';
+$en-2x-x: 160px;
+$en-2x-y: 48px;
+$en-2x-offset-x: -160px;
+$en-2x-offset-y: -48px;
+$en-2x-width: 48px;
+$en-2x-height: 48px;
+$en-2x-total-width: 248px;
+$en-2x-total-height: 228px;
+$en-2x-image: '../images/sprites/sprite.png';
+$en-2x: (160px, 48px, -160px, -48px, 48px, 48px, 248px, 228px, '../images/sprites/sprite.png', 'en@2x', );
+
+$facebook-blue-2x-name: 'facebook-blue@2x';
+$facebook-blue-2x-x: 208px;
+$facebook-blue-2x-y: 80px;
+$facebook-blue-2x-offset-x: -208px;
+$facebook-blue-2x-offset-y: -80px;
+$facebook-blue-2x-width: 40px;
+$facebook-blue-2x-height: 40px;
+$facebook-blue-2x-total-width: 248px;
+$facebook-blue-2x-total-height: 228px;
+$facebook-blue-2x-image: '../images/sprites/sprite.png';
+$facebook-blue-2x: (208px, 80px, -208px, -80px, 40px, 40px, 248px, 228px, '../images/sprites/sprite.png', 'facebook-blue@2x', );
+$facebook-pink-2x-name: 'facebook-pink@2x';
+$facebook-pink-2x-x: 160px;
+$facebook-pink-2x-y: 96px;
+$facebook-pink-2x-offset-x: -160px;
+$facebook-pink-2x-offset-y: -96px;
+$facebook-pink-2x-width: 40px;
+$facebook-pink-2x-height: 40px;
+$facebook-pink-2x-total-width: 248px;
+$facebook-pink-2x-total-height: 228px;
+$facebook-pink-2x-image: '../images/sprites/sprite.png';
+$facebook-pink-2x: (160px, 96px, -160px, -96px, 40px, 40px, 248px, 228px, '../images/sprites/sprite.png', 'facebook-pink@2x', );
+$improve-large-2x-name: 'improve-large@2x';
+$improve-large-2x-x: 0px;
+$improve-large-2x-y: 0px;
+$improve-large-2x-offset-x: 0px;
+$improve-large-2x-offset-y: 0px;
+$improve-large-2x-width: 80px;
+$improve-large-2x-height: 80px;
+$improve-large-2x-total-width: 248px;
+$improve-large-2x-total-height: 228px;
+$improve-large-2x-image: '../images/sprites/sprite.png';
+$improve-large-2x: (0px, 0px, 0px, 0px, 80px, 80px, 248px, 228px, '../images/sprites/sprite.png', 'improve-large@2x', );
+$improve-small-2x-name: 'improve-small@2x';
+$improve-small-2x-x: 0px;
+$improve-small-2x-y: 80px;
+$improve-small-2x-offset-x: 0px;
+$improve-small-2x-offset-y: -80px;
+$improve-small-2x-width: 60px;
+$improve-small-2x-height: 60px;
+$improve-small-2x-total-width: 248px;
+$improve-small-2x-total-height: 228px;
+$improve-small-2x-image: '../images/sprites/sprite.png';
+$improve-small-2x: (0px, 80px, 0px, -80px, 60px, 60px, 248px, 228px, '../images/sprites/sprite.png', 'improve-small@2x', );
+$instagram-blue-2x-name: 'instagram-blue@2x';
+$instagram-blue-2x-x: 120px;
+$instagram-blue-2x-y: 80px;
+$instagram-blue-2x-offset-x: -120px;
+$instagram-blue-2x-offset-y: -80px;
+$instagram-blue-2x-width: 40px;
+$instagram-blue-2x-height: 40px;
+$instagram-blue-2x-total-width: 248px;
+$instagram-blue-2x-total-height: 228px;
+$instagram-blue-2x-image: '../images/sprites/sprite.png';
+$instagram-blue-2x: (120px, 80px, -120px, -80px, 40px, 40px, 248px, 228px, '../images/sprites/sprite.png', 'instagram-blue@2x', );
+$instagram-pink-2x-name: 'instagram-pink@2x';
+$instagram-pink-2x-x: 144px;
+$instagram-pink-2x-y: 140px;
+$instagram-pink-2x-offset-x: -144px;
+$instagram-pink-2x-offset-y: -140px;
+$instagram-pink-2x-width: 40px;
+$instagram-pink-2x-height: 40px;
+$instagram-pink-2x-total-width: 248px;
+$instagram-pink-2x-total-height: 228px;
+$instagram-pink-2x-image: '../images/sprites/sprite.png';
+$instagram-pink-2x: (144px, 140px, -144px, -140px, 40px, 40px, 248px, 228px, '../images/sprites/sprite.png', 'instagram-pink@2x', );
+$linkedin-blue-2x-name: 'linkedin-blue@2x';
+$linkedin-blue-2x-x: 208px;
+$linkedin-blue-2x-y: 0px;
+$linkedin-blue-2x-offset-x: -208px;
+$linkedin-blue-2x-offset-y: 0px;
+$linkedin-blue-2x-width: 40px;
+$linkedin-blue-2x-height: 40px;
+$linkedin-blue-2x-total-width: 248px;
+$linkedin-blue-2x-total-height: 228px;
+$linkedin-blue-2x-image: '../images/sprites/sprite.png';
+$linkedin-blue-2x: (208px, 0px, -208px, 0px, 40px, 40px, 248px, 228px, '../images/sprites/sprite.png', 'linkedin-blue@2x', );
+$linkedin-pink-2x-name: 'linkedin-pink@2x';
+$linkedin-pink-2x-x: 208px;
+$linkedin-pink-2x-y: 40px;
+$linkedin-pink-2x-offset-x: -208px;
+$linkedin-pink-2x-offset-y: -40px;
+$linkedin-pink-2x-width: 40px;
+$linkedin-pink-2x-height: 40px;
+$linkedin-pink-2x-total-width: 248px;
+$linkedin-pink-2x-total-height: 228px;
+$linkedin-pink-2x-image: '../images/sprites/sprite.png';
+$linkedin-pink-2x: (208px, 40px, -208px, -40px, 40px, 40px, 248px, 228px, '../images/sprites/sprite.png', 'linkedin-pink@2x', );
+
+$sv-2x-name: 'sv@2x';
+$sv-2x-x: 0px;
+$sv-2x-y: 140px;
+$sv-2x-offset-x: 0px;
+$sv-2x-offset-y: -140px;
+$sv-2x-width: 48px;
+$sv-2x-height: 48px;
+$sv-2x-total-width: 248px;
+$sv-2x-total-height: 228px;
+$sv-2x-image: '../images/sprites/sprite.png';
+$sv-2x: (0px, 140px, 0px, -140px, 48px, 48px, 248px, 228px, '../images/sprites/sprite.png', 'sv@2x', );
+
+$twitter-blue-2x-name: 'twitter-blue@2x';
+$twitter-blue-2x-x: 208px;
+$twitter-blue-2x-y: 120px;
+$twitter-blue-2x-offset-x: -208px;
+$twitter-blue-2x-offset-y: -120px;
+$twitter-blue-2x-width: 40px;
+$twitter-blue-2x-height: 40px;
+$twitter-blue-2x-total-width: 248px;
+$twitter-blue-2x-total-height: 228px;
+$twitter-blue-2x-image: '../images/sprites/sprite.png';
+$twitter-blue-2x: (208px, 120px, -208px, -120px, 40px, 40px, 248px, 228px, '../images/sprites/sprite.png', 'twitter-blue@2x', );
+$twitter-pink-2x-name: 'twitter-pink@2x';
+$twitter-pink-2x-x: 0px;
+$twitter-pink-2x-y: 188px;
+$twitter-pink-2x-offset-x: 0px;
+$twitter-pink-2x-offset-y: -188px;
+$twitter-pink-2x-width: 40px;
+$twitter-pink-2x-height: 40px;
+$twitter-pink-2x-total-width: 248px;
+$twitter-pink-2x-total-height: 228px;
+$twitter-pink-2x-image: '../images/sprites/sprite.png';
+$twitter-pink-2x: (0px, 188px, 0px, -188px, 40px, 40px, 248px, 228px, '../images/sprites/sprite.png', 'twitter-pink@2x', );
+$spritesheet-width: 124px;
+$spritesheet-height: 114px;
+$spritesheet-image: '../images/sprites/sprite.png';
+$spritesheet-sprites: ($create-large, $create-small, $da, $de, $en-gb, $en, $facebook-blue, $facebook-pink, $improve-large, $improve-small, $instagram-blue, $instagram-pink, $linkedin-blue, $linkedin-pink, $sv, $twitter-blue, $twitter-pink, );
+$spritesheet: (124px, 114px, '../images/sprites/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 248px;
+$retina-spritesheet-height: 228px;
+$retina-spritesheet-image: '../images/sprites/sprite.png';
+$retina-spritesheet-sprites: ($create-large-2x, $create-small-2x, $da-2x, $de-2x, $en-gb-2x, $en-2x, $facebook-blue-2x, $facebook-pink-2x, $improve-large-2x, $improve-small-2x, $instagram-blue-2x, $instagram-pink-2x, $linkedin-blue-2x, $linkedin-pink-2x, $sv-2x, $twitter-blue-2x, $twitter-pink-2x, );
+$retina-spritesheet: (248px, 228px, '../images/sprites/sprite.png', $retina-spritesheet-sprites, );
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+$create-large-group-name: 'create-large';
+$create-large-group: ('create-large', $create-large, $create-large-2x, );
+$create-small-group-name: 'create-small';
+$create-small-group: ('create-small', $create-small, $create-small-2x, );
+
+$fr-group-name: 'fr';
+$fr-group: ('fr', $fr, $fr-2x, );
+
+$da-group-name: 'da';
+$da-group: ('da', $da, $da-2x, );
+
+$de-group-name: 'de';
+$de-group: ('de', $de, $de-2x, );
+
+$en-gb-group-name: 'en-gb';
+$en-gb-group: ('en-gb', $en-gb, $en-gb-2x, );
+
+$en-group-name: 'en';
+$en-group: ('en', $en, $en-2x, );
+
+$facebook-blue-group-name: 'facebook-blue';
+$facebook-blue-group: ('facebook-blue', $facebook-blue, $facebook-blue-2x, );
+$facebook-pink-group-name: 'facebook-pink';
+$facebook-pink-group: ('facebook-pink', $facebook-pink, $facebook-pink-2x, );
+$improve-large-group-name: 'improve-large';
+$improve-large-group: ('improve-large', $improve-large, $improve-large-2x, );
+$improve-small-group-name: 'improve-small';
+$improve-small-group: ('improve-small', $improve-small, $improve-small-2x, );
+$instagram-blue-group-name: 'instagram-blue';
+$instagram-blue-group: ('instagram-blue', $instagram-blue, $instagram-blue-2x, );
+$instagram-pink-group-name: 'instagram-pink';
+$instagram-pink-group: ('instagram-pink', $instagram-pink, $instagram-pink-2x, );
+$linkedin-blue-group-name: 'linkedin-blue';
+$linkedin-blue-group: ('linkedin-blue', $linkedin-blue, $linkedin-blue-2x, );
+$linkedin-pink-group-name: 'linkedin-pink';
+$linkedin-pink-group: ('linkedin-pink', $linkedin-pink, $linkedin-pink-2x, );
+$sv-group-name: 'sv';
+$sv-group: ('sv', $sv, $sv-2x, );
+$twitter-blue-group-name: 'twitter-blue';
+$twitter-blue-group: ('twitter-blue', $twitter-blue, $twitter-blue-2x, );
+$twitter-pink-group-name: 'twitter-pink';
+$twitter-pink-group: ('twitter-pink', $twitter-pink, $twitter-pink-2x, );
+$retina-groups: ($create-large-group, $create-small-group, $da-group, $de-group, $en-gb-group, $en-group, $facebook-blue-group, $facebook-pink-group, $improve-large-group, $improve-small-group, $instagram-blue-group, $instagram-pink-group, $linkedin-blue-group, $linkedin-pink-group, $sv-group, $twitter-blue-group, $twitter-pink-group, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
+*/
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

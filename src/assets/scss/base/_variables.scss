@@ -1,0 +1,91 @@
+//Breakpoints
+$mobile-landscape: 480px;
+$mobile-landscape-large: 640px;
+$tablet-small: 768px;
+$desktop: 1024px;
+$desktop-wide: 1280px;
+$desktop-superwide: 1400px;
+
+// Grid variables
+$container-margin: 20px;
+$container-desktop-wide: 1120px;
+$container-desktop-superwide: 1320px;
+$container-spacing: 40px;
+
+$column-mobile: 4;
+$column-tablet: 8;
+$column-desktop: 12;
+
+//Font variables
+$base-font-size: 16px;
+$base-line-height: 1.4;
+
+// Add global paths
+$image-path: '../images/';
+$space-small: 20px;
+
+
+// Breakpoints
+$small:     320px;
+$medium:     480px;
+$large:     769px;
+$tablet:     992px;
+$xlarge:     1200px;
+$xxlarge:     1600px;
+
+// Colours
+$blue:       #0D28FF;
+$dark-blue:   #112146;
+$grey:       #CBCBCB;
+$light-grey:   #F7F7F9;
+$lighter-grey: #E3E3E5;
+$dark-grey:   #333333;
+$pink:       #FF0D57;
+$pink-light:       #FF2869;
+
+// Grid
+$susy: (
+  columns: 8,
+  gutters: 1/20,
+  gutter-position: split,
+  global-box-sizing: border-box
+);
+
+$susy-forms: (
+  columns: 12,
+  gutters: 36px / 62px,
+  gutter-position: after,
+  global-box-sizing: border-box
+);
+
+//Header
+$header-height-small: 80px;
+$header-height-large: 85px;
+$header-height-xxlarge: 85px;
+
+//Mixins
+@mixin clearfix() {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+%base-text {
+  font-size: 14px;
+  line-height: 1.5;
+
+  @media only screen and (min-width: $xxlarge) {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}

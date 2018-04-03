@@ -1,0 +1,176 @@
+.featured-resources {
+  /* iphone 6 */
+
+  .slide {
+    &__item {
+      position: relative;
+    }
+
+    &__content {
+      @media screen and (min-width: $desktop){
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 100%;
+        position: relative;
+      }
+
+      &:after {
+        background-color: rgba(17, 33, 70, 0.8);
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+
+    &__media {
+      background-position: center center;
+      background-size: cover;
+      height: 500px;
+      background-repeat: no-repeat;
+
+      @media only screen and (min-width:$small ) and (max-width: $xlarge) {
+        height: 400px;
+      }
+    }
+
+    &__constrained {
+      align-content: center;
+      align-items: stretch;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      padding-top: 10px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &__caption {
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 35px;
+      line-height: 40px;
+      padding-bottom: 15px;
+
+      @media only screen and (max-width: $medium) {
+        font-size: 30px;
+      }
+
+      @include susy-media(desktop) {
+        font-size: 40px;
+        line-height: 64px;
+      }
+
+      @include susy-media(desktopWide) {
+        margin: 5px 0 10px;
+        font-size: 48px;
+        padding-bottom: 15px;
+        padding-top:  20px;
+      }
+    }
+
+    &__description {
+      font-size: 19.8px;
+      line-height: 24px;
+      margin: 0 auto;
+      text-align: center;
+
+      @media only screen and (max-width: $medium) {
+        font-size: 16px;
+      }
+
+      @include susy-media(tablet) {
+        width: 70%;
+        line-height: 30px;
+      }
+
+      @include susy-media(desktop) {
+        font-size: 20px;
+      }
+
+      @include susy-media(desktopWide) {
+        font-size: 22px;
+        line-height: 42px;
+      }
+    }
+
+    &__link {
+      margin: 45px 0;
+
+      @media only screen and (max-width: $medium) {
+        margin: 30px 0;
+      }
+
+      .btn {
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .slick {
+    &-dots {
+      bottom: 25px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+
+      li {
+        margin: 0;
+      }
+
+      button {
+        background: transparent;
+        height: 20px;
+        margin: 0 5px 5px;
+        max-width: none;
+        padding: 0;
+        padding: 5px;
+        position: relative;
+        text-indent: -999em;
+        width: 20px;
+
+        &:before {
+          background: rgba($white, .25);
+          border-radius: 50%;
+          content: "";
+          height: 10px;
+          left: 0;
+          margin: 0 auto;
+          position: absolute;
+          right: 0;
+          text-align: center;
+          top: 0;
+          width: 10px;
+        }
+
+        &:hover {
+          &:before {
+            background: rgba($white, .75);
+          }
+        }
+      }
+    }
+
+    &-active {
+      button {
+        &:before {
+          background: rgba($white, .75);
+        }
+      }
+    }
+  }
+}

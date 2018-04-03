@@ -1,0 +1,30 @@
+.grid-content__image img {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  max-width: inherit;
+}
+
+a.btn, a.btn:visited {
+  color: #fff;
+}
+
+.block-text__content {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.bg--dark {
+  background-color: #000;
+}
+.hero-banner__image {
+  opacity: .7;
+}

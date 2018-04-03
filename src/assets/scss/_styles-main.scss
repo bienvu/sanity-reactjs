@@ -1,0 +1,90 @@
+// STYLES-MAIN.SCSS
+
+// Please centralize all includes here.
+
+// WARNING: DO NOT EDIT /assets/css/styles.css file manually, this should be generated only by compiler based on this file.
+
+
+//Required imports
+@import '../vendor/susy/susy';
+
+
+// Vendors
+@import 'vendors/reset';
+
+//Base
+@import 'base/variables';
+@import 'base/colors';
+@import 'base/sprites';
+
+//Helpers
+@import 'helpers/extends';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'base/grid';
+@import 'helpers/helpers';
+@import 'helpers/animate';
+
+// Reset
+// @import 'base/reset';
+
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/icons';
+@import 'base/animation';
+@import 'base/btn';
+@import 'base/form';
+
+// Vendors
+//@import 'vendors/chosen';
+@import 'vendors/slick';
+
+// Blocks
+@import 'blocks/block-example';
+@import 'blocks/index-links';
+@import 'blocks/block-cta';
+@import 'blocks/featured-resources';
+@import 'blocks/hero-banner';
+@import 'blocks/grid-client';
+@import 'blocks/related-grid';
+@import 'blocks/resources-view';
+@import 'blocks/icon-heading';
+@import 'blocks/page-heading';
+@import 'blocks/grid-feed';
+@import 'blocks/location-grid';
+@import 'blocks/icon-grid';
+@import 'blocks/block-card';
+@import 'blocks/grid-content';
+@import 'blocks/social-share';
+@import 'blocks/block-contact';
+@import 'blocks/grid-pattern';
+@import 'blocks/block-media';
+@import 'blocks/job-list';
+@import 'blocks/block-quote';
+@import 'blocks/block-newsletter';
+@import 'blocks/block-locale';
+@import 'blocks/list-item';
+@import 'blocks/registration-form';
+@import 'blocks/article-title';
+@import 'blocks/contact-form';
+@import 'blocks/bio-grid';
+@import 'blocks/block-filter';
+@import 'blocks/text-cta';
+@import 'blocks/pager';
+@import 'blocks/block-text';
+@import 'blocks/media-feature';
+@import 'blocks/box-feature';
+@import 'blocks/messages';
+
+// Layouts
+@import 'layouts/navigation';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/layout';
+
+// Pages
+@import 'pages/resources-page';
+@import 'pages/blog';
+@import 'pages/index';
+@import 'pages/user';
